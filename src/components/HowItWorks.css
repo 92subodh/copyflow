@@ -1,0 +1,327 @@
+/* =============================================
+   HOW IT WORKS - Aceternity Timeline Style
+   ============================================= */
+
+.how-section {
+  padding: 100px 0;
+  background: var(--section-how-bg);
+  position: relative;
+}
+
+.how-section__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.how-section__title {
+  margin-bottom: 10px;
+  font-size: var(--text-h2);
+  color: var(--navy);
+}
+
+.how-section__sub {
+  color: var(--slate);
+  font-size: 1rem;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+/* Timeline Container */
+.how-timeline__wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+/* Tracking Line */
+.how-timeline__line-container {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  overflow: hidden;
+}
+
+.how-timeline__line-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-lavender);
+}
+
+.how-timeline__line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, transparent, var(--blue-primary) 10%, var(--blue-primary) 90%, transparent);
+}
+
+/* Timeline Items */
+.how-timeline__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.how-timeline__item {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+/* Sticky Left Side */
+.how-timeline__sticky {
+  position: sticky;
+  top: 140px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  width: 320px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.how-timeline__node {
+  position: absolute;
+  left: 3px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px var(--section-how-bg);
+}
+
+.how-timeline__node-inner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--btn-secondary-border);
+  background: var(--blue-primary);
+}
+
+.how-timeline__sticky-title {
+  margin-left: 64px;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--slate-300);
+  opacity: 0.8;
+}
+
+.how-timeline__mobile-title {
+  display: none;
+}
+
+/* Right Content Side */
+.how-timeline__content {
+  flex-grow: 1;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.how-timeline__content-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.how-timeline__card {
+  background: var(--bg-card);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-timeline__card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.how-timeline__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg-lavender);
+  color: var(--blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.how-timeline__card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.how-timeline__card-desc {
+  color: var(--slate);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: auto;
+}
+
+.timeline-item__token {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  background: var(--bg-lavender);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+/* Visual Placeholder (right side block) */
+.how-timeline__visual {
+  height: 100%;
+}
+
+.timeline-preview {
+  background: linear-gradient(135deg, var(--bg-page) 0%, var(--bg-lavender) 100%);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.8);
+}
+
+.timeline-preview__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.timeline-preview__dots {
+  display: flex;
+  gap: 5px;
+}
+
+.timeline-preview__dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--slate-300);
+}
+
+.timeline-preview__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--slate);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.timeline-preview__body {
+  background: var(--bg-card);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: 12px;
+  padding: 24px 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.timeline-preview__icon-banner {
+  margin-bottom: 16px;
+  color: var(--blue-primary);
+  opacity: 0.8;
+}
+
+.timeline-preview__row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.timeline-preview__line {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--bg-lavender);
+}
+
+.timeline-preview__line--lg { width: 70%; }
+.timeline-preview__line--sm { width: 40%; }
+
+.timeline-preview__chip {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--bg-page);
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--btn-secondary-border);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .how-timeline__content-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-timeline__item {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .how-timeline__sticky {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .how-timeline__sticky-title {
+    display: none;
+  }
+  
+  .how-timeline__mobile-title {
+    display: block;
+    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--slate-300);
+  }
+
+  .how-timeline__content {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+}
+

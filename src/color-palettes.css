@@ -1,0 +1,406 @@
+/* =============================================
+   CopyFlow Palette Presets
+   Edit these variables to test new color systems globally.
+   Switch preset by setting: document.documentElement.dataset.palette
+   ============================================= */
+
+:root,
+:root[data-palette='cotton-candy'] {
+  --pink-orchid: #cdb4db;
+  --pastel-petal: #ffc8dd;
+  --blush-pop: #ffafcc;
+  --icy-blue: #bde0fe;
+  --sky-blue: #a2d2ff;
+
+  --blue-primary: var(--sky-blue);
+  --blue-cyan: var(--icy-blue);
+  --navy: #3d3350;
+  --bg-page: #fff9fd;
+  --bg-card: #fffaff;
+  --bg-lavender: #f7ecfa;
+  --slate: #7b6f8f;
+  --slate-300: #baa9cb;
+  --green-confirm: var(--sky-blue);
+  --amber-token: var(--blush-pop);
+  --whatsapp-green: var(--pink-orchid);
+  --telegram-blue: var(--sky-blue);
+
+  --grad-cta: var(--pink-orchid);
+  --grad-hero-bg: #f9eff7;
+  --grad-dark: #f4eafb;
+  --grad-banner: #d8c2e6;
+
+  --bg-page-grad-start: #fff9fd;
+  --bg-page-grad-end: #fdf6fb;
+
+  --eyebrow-text: #7a5d98;
+  --eyebrow-bg: #fbeff8;
+  --eyebrow-border: rgba(205, 180, 219, 0.65);
+
+  --btn-primary-bg: var(--pink-orchid);
+  --btn-primary-shadow: 0 8px 24px rgba(238, 146, 180, 0.45);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(175, 138, 216, 0.5);
+
+  --btn-secondary-border: rgba(205, 180, 219, 0.7);
+  --btn-secondary-hover-text: #735591;
+
+  --glow-shadow-start: 0 0 18px rgba(255, 175, 204, 0.45), 0 8px 30px rgba(162, 210, 255, 0.25);
+  --glow-shadow-mid: 0 0 44px rgba(255, 175, 204, 0.58), 0 8px 46px rgba(162, 210, 255, 0.3);
+
+  --section-features-bg: #f5eaf8;
+  --section-faq-bg: #f8eef8;
+  --section-how-bg: #f7eef9;
+  --section-kiosk-bg: #f3e9fa;
+  --section-stats-bg: #f5ebfa;
+  --section-footer-bg: #f2e8f7;
+  --section-footer-cta-bg: #d5bfdf;
+
+  --feature-security-color: #22c55e;
+  --feature-security-bg: #f0fdf4;
+  --feature-bot-color: #25d366;
+  --feature-bot-bg: #f0fdf4;
+  --feature-kiosk-color: #8b5cf6;
+  --feature-kiosk-bg: #f5f3ff;
+  --feature-phone-color: #06b6d4;
+  --feature-phone-bg: #ecfeff;
+}
+
+:root[data-palette='mint-breeze'] {
+  --pink-orchid: #9fd3c7;
+  --pastel-petal: #d7fbe8;
+  --blush-pop: #b8f2d0;
+  --icy-blue: #bee9ff;
+  --sky-blue: #95d5ff;
+
+  --blue-primary: #79bde8;
+  --navy: #2d4e57;
+  --bg-page: #f6fffb;
+  --bg-card: #fbfffd;
+  --bg-lavender: #eaf8f2;
+  --slate: #5f7f7f;
+  --slate-300: #9bb8b7;
+
+  --bg-page-grad-start: #f7fffb;
+  --bg-page-grad-end: #f2fffa;
+
+  --eyebrow-text: #47726d;
+  --eyebrow-bg: #e8f8f1;
+  --eyebrow-border: rgba(159, 211, 199, 0.6);
+
+  --btn-primary-bg: #8dcabf;
+  --btn-primary-shadow: 0 8px 24px rgba(124, 194, 178, 0.4);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(116, 186, 176, 0.48);
+
+  --btn-secondary-border: rgba(143, 204, 193, 0.7);
+  --btn-secondary-hover-text: #41716a;
+
+  --glow-shadow-start: 0 0 18px rgba(159, 211, 199, 0.4), 0 8px 30px rgba(149, 213, 255, 0.24);
+  --glow-shadow-mid: 0 0 44px rgba(159, 211, 199, 0.55), 0 8px 46px rgba(149, 213, 255, 0.3);
+
+  --section-features-bg: #edf9f4;
+  --section-faq-bg: #f0fbf6;
+  --section-how-bg: #eefaf5;
+  --section-kiosk-bg: #e9f8f2;
+  --section-stats-bg: #eefaf5;
+  --section-footer-bg: #e6f4ef;
+  --section-footer-cta-bg: #b5d9cf;
+
+  --feature-security-color: #2aa981;
+  --feature-security-bg: #e7f8f0;
+  --feature-bot-color: #25b76c;
+  --feature-bot-bg: #e8faf1;
+  --feature-kiosk-color: #62a8b9;
+  --feature-kiosk-bg: #e8f5f9;
+  --feature-phone-color: #4cb3ce;
+  --feature-phone-bg: #e9f7fb;
+}
+
+:root[data-palette='sunset-cream'] {
+  --pink-orchid: #e9b89e;
+  --pastel-petal: #ffd9c7;
+  --blush-pop: #ffc09f;
+  --icy-blue: #d5e8f2;
+  --sky-blue: #b5d5e8;
+
+  --blue-primary: #92bfd9;
+  --navy: #4d3f3b;
+  --bg-page: #fffaf5;
+  --bg-card: #fffdf9;
+  --bg-lavender: #f9eee5;
+  --slate: #846f66;
+  --slate-300: #b9a196;
+
+  --bg-page-grad-start: #fffaf6;
+  --bg-page-grad-end: #fff7ef;
+
+  --eyebrow-text: #946e5e;
+  --eyebrow-bg: #fbeee6;
+  --eyebrow-border: rgba(233, 184, 158, 0.62);
+
+  --btn-primary-bg: #d9ad94;
+  --btn-primary-shadow: 0 8px 24px rgba(220, 171, 141, 0.4);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(206, 156, 126, 0.48);
+
+  --btn-secondary-border: rgba(224, 184, 159, 0.7);
+  --btn-secondary-hover-text: #875f50;
+
+  --glow-shadow-start: 0 0 18px rgba(255, 192, 159, 0.44), 0 8px 30px rgba(181, 213, 232, 0.23);
+  --glow-shadow-mid: 0 0 44px rgba(255, 192, 159, 0.58), 0 8px 46px rgba(181, 213, 232, 0.3);
+
+  --section-features-bg: #f8eee6;
+  --section-faq-bg: #faf2ea;
+  --section-how-bg: #f9f0e8;
+  --section-kiosk-bg: #f6ece4;
+  --section-stats-bg: #f8eee6;
+  --section-footer-bg: #f4e8dd;
+  --section-footer-cta-bg: #dec5b7;
+
+  --feature-security-color: #d08a6f;
+  --feature-security-bg: #fbece2;
+  --feature-bot-color: #c9987b;
+  --feature-bot-bg: #fcf0e8;
+  --feature-kiosk-color: #8ba9b8;
+  --feature-kiosk-bg: #eef5f8;
+  --feature-phone-color: #6ea7c5;
+  --feature-phone-bg: #eaf3f8;
+}
+
+:root[data-palette='kraft-paper'] {
+  --pink-orchid: #8B5E3C;
+  --pastel-petal: #EADBC8;
+  --blush-pop: #FACC15;
+  --icy-blue: #9CA3AF;
+  --sky-blue: #6B7280;
+
+  --blue-primary: #8B5E3C;
+  --navy: #3E2C23;
+  --bg-page: #FDF8F3;
+  --bg-card: #FFFFFF;
+  --bg-lavender: #F3E8DD;
+  --slate: #6B5B52;
+  --slate-300: #D6C3B5;
+
+  --bg-page-grad-start: #FDF8F3;
+  --bg-page-grad-end: #F6EFE7;
+
+  --eyebrow-text: #5C4033;
+  --eyebrow-bg: #F3E8DD;
+  --eyebrow-border: rgba(139,94,60,0.35);
+
+  --btn-primary-bg: #8B5E3C;
+  --btn-primary-shadow: 0 8px 24px rgba(139,94,60,0.35);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(139,94,60,0.45);
+
+  --btn-secondary-border: rgba(139,94,60,0.35);
+  --btn-secondary-hover-text: #5C4033;
+
+  --glow-shadow-start: 0 0 18px rgba(139,94,60,0.35), 0 8px 30px rgba(214,195,181,0.25);
+  --glow-shadow-mid: 0 0 44px rgba(139,94,60,0.45), 0 8px 46px rgba(214,195,181,0.3);
+
+  --section-features-bg: #F7EFE7;
+  --section-faq-bg: #F9F3EC;
+  --section-how-bg: #F7EFE7;
+  --section-kiosk-bg: #F3E8DD;
+  --section-stats-bg: #F7EFE7;
+  --section-footer-bg: #EFE3D6;
+  --section-footer-cta-bg: #E0CFC2;
+
+  --feature-security-color: #16A34A;
+  --feature-security-bg: #ECFDF5;
+  --feature-bot-color: #8B5E3C;
+  --feature-bot-bg: #F6EFE7;
+  --feature-kiosk-color: #A16207;
+  --feature-kiosk-bg: #FEF3C7;
+  --feature-phone-color: #6B7280;
+  --feature-phone-bg: #F3F4F6;
+}
+
+:root[data-palette='paper-print'] {
+  --pink-orchid: #2F6FED;
+  --pastel-petal: #DBEAFE;
+  --blush-pop: #FACC15;
+  --icy-blue: #60A5FA;
+  --sky-blue: #3B82F6;
+
+  --blue-primary: #2F6FED;
+  --blue-cyan: #60A5FA;
+  --navy: #1F2937;
+  --bg-page: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --bg-lavender: #F3F4F6;
+  --slate: #6B7280;
+  --slate-300: #D1D5DB;
+  --green-confirm: #22C55E;
+  --amber-token: #FACC15;
+  --whatsapp-green: #25D366;
+  --telegram-blue: #2AABEE;
+
+  --grad-cta: #2F6FED;
+  --grad-hero-bg: #F8FAFC;
+  --grad-dark: #E5E7EB;
+  --grad-banner: #DBEAFE;
+
+  --bg-page-grad-start: #FAFAF7;
+  --bg-page-grad-end: #F8FAFC;
+
+  --eyebrow-text: #374151;
+  --eyebrow-bg: #F3F4F6;
+  --eyebrow-border: rgba(59,130,246,0.35);
+
+  --btn-primary-bg: #2F6FED;
+  --btn-primary-shadow: 0 8px 24px rgba(47,111,237,0.35);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(47,111,237,0.45);
+
+  --btn-secondary-border: rgba(59,130,246,0.35);
+  --btn-secondary-hover-text: #1E40AF;
+
+  --glow-shadow-start: 0 0 18px rgba(59,130,246,0.35), 0 8px 30px rgba(96,165,250,0.25);
+  --glow-shadow-mid: 0 0 44px rgba(59,130,246,0.45), 0 8px 46px rgba(96,165,250,0.3);
+
+  --section-features-bg: #F8FAFC;
+  --section-faq-bg: #F9FAFB;
+  --section-how-bg: #F8FAFC;
+  --section-kiosk-bg: #F3F4F6;
+  --section-stats-bg: #F8FAFC;
+  --section-footer-bg: #F3F4F6;
+  --section-footer-cta-bg: #DBEAFE;
+
+  --feature-security-color: #22C55E;
+  --feature-security-bg: #F0FDF4;
+  --feature-bot-color: #2563EB;
+  --feature-bot-bg: #EFF6FF;
+  --feature-kiosk-color: #6366F1;
+  --feature-kiosk-bg: #EEF2FF;
+  --feature-phone-color: #0EA5E9;
+  --feature-phone-bg: #F0F9FF;
+}
+
+
+/* Dark Ink Theme */
+
+:root[data-palette='ink-dark'] {
+  --pink-orchid: #2563EB;
+  --pastel-petal: #1E293B;
+  --blush-pop: #FACC15;
+  --icy-blue: #3B82F6;
+  --sky-blue: #60A5FA;
+
+  --blue-primary: #3B82F6;
+  --navy: #020617;
+  --bg-page: #020617;
+  --bg-card: #0F172A;
+  --bg-lavender: #111827;
+  --slate: #9CA3AF;
+  --slate-300: #374151;
+
+  --bg-page-grad-start: #020617;
+  --bg-page-grad-end: #111827;
+
+  --eyebrow-text: #E5E7EB;
+  --eyebrow-bg: #111827;
+  --eyebrow-border: rgba(59,130,246,0.4);
+
+  --btn-primary-bg: #2563EB;
+  --btn-primary-shadow: 0 8px 24px rgba(37,99,235,0.35);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(37,99,235,0.45);
+
+  --btn-secondary-border: rgba(59,130,246,0.4);
+  --btn-secondary-hover-text: #93C5FD;
+
+  --glow-shadow-start: 0 0 18px rgba(37,99,235,0.45), 0 8px 30px rgba(96,165,250,0.25);
+  --glow-shadow-mid: 0 0 44px rgba(37,99,235,0.6), 0 8px 46px rgba(96,165,250,0.3);
+
+  --section-features-bg: #020617;
+  --section-faq-bg: #020617;
+  --section-how-bg: #020617;
+  --section-kiosk-bg: #020617;
+  --section-stats-bg: #020617;
+  --section-footer-bg: #020617;
+  --section-footer-cta-bg: #1E293B;
+
+  --feature-security-color: #22C55E;
+  --feature-security-bg: #022C22;
+  --feature-bot-color: #3B82F6;
+  --feature-bot-bg: #0C1F40;
+  --feature-kiosk-color: #6366F1;
+  --feature-kiosk-bg: #1E1B4B;
+  --feature-phone-color: #0EA5E9;
+  --feature-phone-bg: #082F49;
+}
+
+:root[data-palette='p'] {
+
+  /* ===== Base Background System (Paper Inspired) ===== */
+  --bg-page: #EAE8E3;
+  --bg-card: #F3F1EC;
+  --bg-lavender: #E5E3DD;
+  --grad-hero-bg: #EFEDE7;
+  --grad-dark: #E1DFD9;
+  --grad-banner: #DDDAD4;
+
+  --bg-page-grad-start: #F1EFEA;
+  --bg-page-grad-end: #E6E4DE;
+
+  /* ===== Primary Orange System (Closer to #d35419) ===== */
+  --orange-primary: #b84b19;
+  --orange-soft: #E06A33;
+  --orange-muted: #E89A73;
+  --orange-light: #F3C5AC;
+
+  --blue-primary: var(--orange-primary);
+  --blue-cyan: var(--orange-soft);
+
+  /* ===== Text Colors ===== */
+  --navy: #2F2E2B;
+  --slate: #6C6A65;
+  --slate-300: #A6A39C;
+
+  /* ===== UI Elements ===== */
+  --green-confirm: var(--orange-primary);
+  --amber-token: var(--orange-soft);
+
+  --whatsapp-green: var(--orange-primary);
+  --telegram-blue: var(--orange-soft);
+
+  /* ===== Gradients ===== */
+  --grad-cta: var(--orange-primary);
+
+  /* ===== Eyebrow Labels ===== */
+  --eyebrow-text: #7A3C1C;
+  --eyebrow-bg: #F4E8E2;
+  --eyebrow-border: rgba(211, 84, 25, 0.35);
+
+  /* ===== Buttons ===== */
+  --btn-primary-bg: var(--orange-primary);
+  --btn-primary-shadow: 0 8px 24px rgba(211, 84, 25, 0.28);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(211, 84, 25, 0.40);
+
+  --btn-secondary-border: rgba(211, 84, 25, 0.45);
+  --btn-secondary-hover-text: #8A3A18;
+
+  /* ===== Glow Effects ===== */
+  --glow-shadow-start: 0 0 18px rgba(211, 84, 25, 0.25);
+  --glow-shadow-mid: 0 0 44px rgba(211, 84, 25, 0.35);
+
+  /* ===== Section Backgrounds ===== */
+  --section-features-bg: #F0EEE8;
+  --section-faq-bg: #ECEAE4;
+  --section-how-bg: #F2F0EA;
+  --section-kiosk-bg: #E7E5DF;
+  --section-stats-bg: #EFEDE7;
+  --section-footer-bg: #E3E1DB;
+  --section-footer-cta-bg: #EAD1C6;
+
+  /* ===== Feature Icons ===== */
+  --feature-security-color: #D35419;
+  --feature-security-bg: #FFF3EC;
+
+  --feature-bot-color: #D35419;
+  --feature-bot-bg: #FFF3EC;
+
+  --feature-kiosk-color: #B74616;
+  --feature-kiosk-bg: #FDEAE2;
+
+  --feature-phone-color: #8F3812;
+  --feature-phone-bg: #F8E4DC;
+}

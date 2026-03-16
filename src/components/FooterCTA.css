@@ -1,0 +1,118 @@
+.footer-cta {
+  position: relative;
+  background: var(--section-footer-cta-bg);
+  padding: 96px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer-cta__orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.footer-cta__orb--left {
+  background: rgba(255,255,255,0.9);
+  top: -100px;
+  left: -100px;
+}
+
+.footer-cta__orb--right {
+  background: var(--blue-primary);
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.15;
+}
+
+.footer-cta__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.footer-cta__heading {
+  font-family: var(--font-display);
+  /* font-weight: 800; */
+  font-size: var(--text-h2);
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.footer-cta__accent {
+  color: var(--blue-primary);
+  /* text-decoration: underline; */
+  text-decoration-color: var(--btn-secondary-border);
+  text-underline-offset: 4px;
+}
+
+.footer-cta__sub {
+  color: var(--slate);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 460px;
+}
+
+.footer-cta__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-cta__btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blue-primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--btn-primary-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.footer-cta__btn-main:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--btn-primary-shadow-hover);
+}
+
+.footer-cta__channels {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-cta__channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid var(--btn-secondary-border);
+  color: var(--navy);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.footer-cta__channel:hover {
+  background: rgba(255,255,255,0.5);
+  border-color: var(--blue-primary);
+}
+
+@media (max-width: 768px) {
+  .footer-cta { padding: 64px 0; }
+  .footer-cta__channels { flex-direction: column; align-items: center; }
+}

@@ -1,0 +1,215 @@
+/* =============================================
+   COPYFLOW — Global Styles & CSS Variables
+   ============================================= */
+
+:root {
+  --shadow-card:    0 10px 28px rgba(132, 98, 160, 0.12);
+  --shadow-hover:   0 18px 44px rgba(205, 150, 182, 0.24);
+  --shadow-float:   0 28px 70px rgba(122, 95, 147, 0.18);
+
+  --radius-sm:      8px;
+  --radius-md:      16px;
+  --radius-lg:      24px;
+  --radius-xl:      32px;
+  --radius-pill:    9999px;
+
+  --text-hero:      clamp(3rem, 7vw, 5.5rem);
+  --text-h2:        clamp(2.5rem, 5vw, 4rem);
+  --text-h3:        1.25rem;
+  --text-body:      1rem;
+  --text-small:     0.875rem;
+  --text-mono:      0.85rem;
+
+  --font-display:   'Sora', sans-serif;
+  --font-body:      'Manrope', sans-serif;
+  --font-mono:      'Space Mono', monospace;
+
+  /* Paper line pattern to use across components easily */
+  --paper-pattern:  repeating-linear-gradient(transparent, transparent 39px, rgba(0, 0, 0, 0.04) 39px, rgba(0, 0, 0, 0.04) 40px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  background-image: 
+    repeating-linear-gradient(transparent, transparent 39px, rgba(0, 0, 0, 0.84) 39px, rgba(0, 0, 0, 0.04) 40px),
+    linear-gradient(180deg, var(--bg-page-grad-start) 0%, var(--bg-page-grad-end) 100%);
+  background-attachment: local;
+  color: var(--navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a   { text-decoration: none; color: inherit; }
+ul  { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Apply the paper pattern over section backgrounds so it's globally visible */
+.features-section,
+.how-section,
+.kiosk-section,
+.stats-section,
+.faq-section {
+  background-image: var(--paper-pattern) !important;
+}
+
+/* =============================================
+   LAYOUT UTILITIES
+   ============================================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--eyebrow-text);
+  background: var(--eyebrow-bg);
+  border: 1px solid var(--eyebrow-border);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+
+.two-tone-heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.two-tone-heading .accent { color: var(--blue-primary); }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--grad-cta);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--btn-primary-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--btn-primary-shadow-hover);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--btn-secondary-border);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  border-color: var(--pink-orchid);
+  color: var(--btn-secondary-hover-text);
+  box-shadow: 0 6px 18px rgba(205, 180, 219, 0.3);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50%       { transform: translateY(-16px) rotate(1deg); }
+}
+
+@keyframes floatSubtle {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes bubblePop {
+  0%   { opacity: 0; transform: scale(0.8) translateY(10px); }
+  60%  { transform: scale(1.04) translateY(-2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: var(--glow-shadow-start); }
+  50%       { box-shadow: var(--glow-shadow-mid); }
+}
+
+@keyframes progressPulse {
+  0%   { width: 0%; }
+  100% { width: 92%; }
+}
+
+@keyframes checkBounce {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes typingDots {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30%            { transform: translateY(-4px); opacity: 1; }
+}
+
+@keyframes screenGlow {
+  0%, 100% { opacity: 0.85; }
+  50%       { opacity: 1; }
+}
