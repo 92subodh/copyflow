@@ -34,19 +34,43 @@
   padding: 0;
 }
 
-html { scroll-behavior: smooth; }
+html { /* scroll-behavior removed for Lenis */ }
+
+/* Lenis recommended base styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
 
 body {
   font-family: var(--font-body);
   background-color: var(--bg-page);
-  background-image: 
-    repeating-linear-gradient(transparent, transparent 39px, rgba(0, 0, 0, 0.84) 39px, rgba(0, 0, 0, 0.04) 40px),
-    linear-gradient(180deg, var(--bg-page-grad-start) 0%, var(--bg-page-grad-end) 100%);
-  background-attachment: local;
   color: var(--navy);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+body.home-page-bg {
+  background-image: 
+    repeating-linear-gradient(transparent, transparent 39px, rgba(0, 0, 0, 0.04) 39px, rgba(0, 0, 0, 0.04) 40px),
+    linear-gradient(180deg, var(--bg-page-grad-start) 0%, var(--bg-page-grad-end) 100%);
+  background-attachment: local;
 }
 
 img { max-width: 100%; display: block; }
@@ -128,7 +152,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   align-items: center;
   gap: 8px;
   background: white;
-  color: var(--navy);
+  color: var(--blue-primary);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;

@@ -5,6 +5,83 @@
    ============================================= */
 
 :root,
+
+:root[data-palette='p'] {
+
+  /* ===== Base Background System (Paper Inspired) ===== */
+  --bg-page: #EAE8E3;
+  --bg-card: #F3F1EC;
+  --bg-lavender: #E5E3DD;
+  --grad-hero-bg: #EFEDE7;
+  --grad-dark: #E1DFD9;
+  --grad-banner: #DDDAD4;
+
+  --bg-page-grad-start: #F1EFEA;
+  --bg-page-grad-end: #E6E4DE;
+
+  /* ===== Primary Orange System (Closer to #d35419) ===== */
+  --orange-primary: #b84b19;
+  --orange-soft: #E06A33;
+  --orange-muted: #E89A73;
+  --orange-light: #F3C5AC;
+
+  --blue-primary: var(--orange-primary);
+  --blue-cyan: var(--orange-soft);
+
+  /* ===== Text Colors ===== */
+  --navy: #2F2E2B;
+  --slate: #6C6A65;
+  --slate-300: #A6A39C;
+
+  /* ===== UI Elements ===== */
+  --green-confirm: var(--orange-primary);
+  --amber-token: var(--orange-soft);
+
+  --whatsapp-green: var(--orange-primary);
+  --telegram-blue: var(--orange-soft);
+
+  /* ===== Gradients ===== */
+  --grad-cta: var(--orange-primary);
+
+  /* ===== Eyebrow Labels ===== */
+  --eyebrow-text: #7A3C1C;
+  --eyebrow-bg: #F4E8E2;
+  --eyebrow-border: rgba(211, 84, 25, 0.35);
+
+  /* ===== Buttons ===== */
+  --btn-primary-bg: var(--orange-primary);
+  --btn-primary-shadow: 0 8px 24px rgba(211, 84, 25, 0.28);
+  --btn-primary-shadow-hover: 0 14px 34px rgba(211, 84, 25, 0.20);
+
+  --btn-secondary-border: rgba(211, 84, 25, 0.45);
+  --btn-secondary-hover-text: #8A3A18;
+
+  /* ===== Glow Effects ===== */
+  --glow-shadow-start: 0 0 18px rgba(211, 84, 25, 0.25);
+  --glow-shadow-mid: 0 0 44px rgba(211, 84, 25, 0.35);
+
+  /* ===== Section Backgrounds ===== */
+  --section-features-bg: #F0EEE8;
+  --section-faq-bg: #ECEAE4;
+  --section-how-bg: #F2F0EA;
+  --section-kiosk-bg: #E7E5DF;
+  --section-stats-bg: #EFEDE7;
+  --section-footer-bg: #E3E1DB;
+  --section-footer-cta-bg: #EAD1C6;
+
+  /* ===== Feature Icons ===== */
+  --feature-security-color: #D35419;
+  --feature-security-bg: #FFF3EC;
+
+  --feature-bot-color: #D35419;
+  --feature-bot-bg: #FFF3EC;
+
+  --feature-kiosk-color: #B74616;
+  --feature-kiosk-bg: #FDEAE2;
+
+  --feature-phone-color: #8F3812;
+  --feature-phone-bg: #F8E4DC;
+}
 :root[data-palette='cotton-candy'] {
   --pink-orchid: #cdb4db;
   --pastel-petal: #ffc8dd;
@@ -326,81 +403,4 @@
   --feature-kiosk-bg: #1E1B4B;
   --feature-phone-color: #0EA5E9;
   --feature-phone-bg: #082F49;
-}
-
-:root[data-palette='p'] {
-
-  /* ===== Base Background System (Paper Inspired) ===== */
-  --bg-page: #EAE8E3;
-  --bg-card: #F3F1EC;
-  --bg-lavender: #E5E3DD;
-  --grad-hero-bg: #EFEDE7;
-  --grad-dark: #E1DFD9;
-  --grad-banner: #DDDAD4;
-
-  --bg-page-grad-start: #F1EFEA;
-  --bg-page-grad-end: #E6E4DE;
-
-  /* ===== Primary Orange System (Closer to #d35419) ===== */
-  --orange-primary: #b84b19;
-  --orange-soft: #E06A33;
-  --orange-muted: #E89A73;
-  --orange-light: #F3C5AC;
-
-  --blue-primary: var(--orange-primary);
-  --blue-cyan: var(--orange-soft);
-
-  /* ===== Text Colors ===== */
-  --navy: #2F2E2B;
-  --slate: #6C6A65;
-  --slate-300: #A6A39C;
-
-  /* ===== UI Elements ===== */
-  --green-confirm: var(--orange-primary);
-  --amber-token: var(--orange-soft);
-
-  --whatsapp-green: var(--orange-primary);
-  --telegram-blue: var(--orange-soft);
-
-  /* ===== Gradients ===== */
-  --grad-cta: var(--orange-primary);
-
-  /* ===== Eyebrow Labels ===== */
-  --eyebrow-text: #7A3C1C;
-  --eyebrow-bg: #F4E8E2;
-  --eyebrow-border: rgba(211, 84, 25, 0.35);
-
-  /* ===== Buttons ===== */
-  --btn-primary-bg: var(--orange-primary);
-  --btn-primary-shadow: 0 8px 24px rgba(211, 84, 25, 0.28);
-  --btn-primary-shadow-hover: 0 14px 34px rgba(211, 84, 25, 0.40);
-
-  --btn-secondary-border: rgba(211, 84, 25, 0.45);
-  --btn-secondary-hover-text: #8A3A18;
-
-  /* ===== Glow Effects ===== */
-  --glow-shadow-start: 0 0 18px rgba(211, 84, 25, 0.25);
-  --glow-shadow-mid: 0 0 44px rgba(211, 84, 25, 0.35);
-
-  /* ===== Section Backgrounds ===== */
-  --section-features-bg: #F0EEE8;
-  --section-faq-bg: #ECEAE4;
-  --section-how-bg: #F2F0EA;
-  --section-kiosk-bg: #E7E5DF;
-  --section-stats-bg: #EFEDE7;
-  --section-footer-bg: #E3E1DB;
-  --section-footer-cta-bg: #EAD1C6;
-
-  /* ===== Feature Icons ===== */
-  --feature-security-color: #D35419;
-  --feature-security-bg: #FFF3EC;
-
-  --feature-bot-color: #D35419;
-  --feature-bot-bg: #FFF3EC;
-
-  --feature-kiosk-color: #B74616;
-  --feature-kiosk-bg: #FDEAE2;
-
-  --feature-phone-color: #8F3812;
-  --feature-phone-bg: #F8E4DC;
 }

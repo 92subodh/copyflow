@@ -3,13 +3,13 @@ import { ArrowRight, Play, Shield, CreditCard, Trash2 } from 'lucide-react';
 import './HeroSection.css';
 
 const chatMessages = [
-  { id: 1, from: 'user', text: '📎 assignment_final.pdf', delay: 400 },
-  { id: 2, from: 'bot',  text: 'Got it! ✅ 3 pages received.\nHow many copies? (1/2/3...)', delay: 1200 },
+  { id: 1, from: 'user', text: ' assignment_final.pdf', delay: 400 },
+  { id: 2, from: 'bot',  text: 'Got it!  3 pages received.\nHow many copies? (1/2/3...)', delay: 1200 },
   { id: 3, from: 'user', text: '2', delay: 2200 },
-  { id: 4, from: 'bot',  text: 'Color or B&W? 🎨', delay: 3000 },
+  { id: 4, from: 'bot',  text: 'Color or B&W?', delay: 3000 },
   { id: 5, from: 'user', text: 'B&W', delay: 3800 },
-  { id: 6, from: 'bot',  text: 'Total: ₹6. Pay here 👇', delay: 4600, hasPayBtn: true },
-  { id: 7, from: 'bot',  text: '✅ Payment confirmed!\nYour token:', delay: 5800, hasToken: true },
+  { id: 6, from: 'bot',  text: 'Total: ₹6. Pay here', delay: 4600, hasPayBtn: true },
+  { id: 7, from: 'bot',  text: 'Payment confirmed!\nYour token:', delay: 5800, hasToken: true },
 ];
 
 function ChatMessage({ msg, visible }) {
@@ -22,7 +22,7 @@ function ChatMessage({ msg, visible }) {
         <button className="chat-pay-btn">Pay ₹6 via Razorpay →</button>
       )}
       {msg.hasToken && (
-        <span className="chat-token">🔑 CF-4821</span>
+        <span className="chat-token">CF-4821</span>
       )}
       <span className="chat-time">{msg.from === 'user' ? '11:42' : '11:42'} {msg.from === 'user' ? '✓✓' : ''}</span>
     </div>
@@ -81,11 +81,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* RIGHT: WhatsApp Chat Mockup */}
+        {/* RIGHT: WhatsApp Chat Mockup inside iPhone */}
         <div className="hero__mockup">
-          <div className="wa-card">
-            {/* WhatsApp Header */}
-            <div className="wa-header">
+          <div className="phone-wrapper">
+            <img src="/iphone.png" alt="iPhone Mockup" className="phone-frame" />
+            <div className="wa-card">
+              {/* WhatsApp Header */}
+              <div className="wa-header">
               <div className="wa-header__avatar">CF</div>
               <div className="wa-header__info">
                 <span className="wa-header__name">CopyFlow Bot</span>
@@ -102,7 +104,7 @@ export default function HeroSection() {
             </div>
 
             {/* Chat Body */}
-            <div className="wa-body">
+            <div className="wa-body" data-lenis-prevent="true">
               <div className="wa-date-chip">Today</div>
 
               {chatMessages.map((msg) => (
@@ -124,13 +126,18 @@ export default function HeroSection() {
             {/* Chat input bar */}
             <div className="wa-input-bar">
               <div className="wa-input-field">Type a message</div>
-              <div className="wa-send-btn">→</div>
+              <div className="wa-send-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style={{ marginLeft: '2px', marginTop: '1px' }}>
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                </svg>
+              </div>
             </div>
+          </div>
           </div>
 
           {/* Floating badges */}
           <div className="hero__badge hero__badge--print">
-            <span className="badge-emoji">🖨️</span>
+            <span className="badge-emoji"></span>
             <div>
               <div className="badge-title">Printing...</div>
               <div className="badge-sub">CF-4821 ready</div>
@@ -138,7 +145,7 @@ export default function HeroSection() {
           </div>
 
           <div className="hero__badge hero__badge--confirm">
-            <span className="badge-emoji">✅</span>
+            <span className="badge-emoji"></span>
             <div>
               <div className="badge-title">Payment done!</div>
               <div className="badge-sub">₹6 via UPI</div>

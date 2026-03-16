@@ -19,60 +19,77 @@
   gap: 24px;
 }
 
-/* Feature card */
+/* Feature card - Sticky Note UI */
 .feat-card {
   position: relative;
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  padding: 30px 26px;
-  border: 1px solid var(--btn-secondary-border);
-  border-left: 3px solid var(--feat-color, var(--blue-primary));
-  box-shadow: var(--shadow-card);
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  flex-direction: column;
+  background: 
+    linear-gradient(90deg, transparent 20px, rgba(255, 100, 100, 0.2) 20px, rgba(255, 100, 100, 0.2) 21px, transparent 21px),
+    linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%),
+    repeating-linear-gradient(transparent 0px, transparent 27px, rgba(0, 10, 50, 0.06) 27px, rgba(0, 10, 50, 0.06) 28px),
+    var(--feat-bg, var(--bg-card));
+  border-radius: 4px;
+  padding: 38px 26px 36px 34px; /* Slightly more padding on left for the line */
+  clip-path: polygon(0% 2%, 4% 0%, 8% 2%, 12% 0%, 16% 2%, 20% 0%, 24% 2%, 28% 0%, 32% 2%, 36% 0%, 40% 2%, 44% 0%, 48% 2%, 52% 0%, 56% 2%, 60% 0%, 64% 2%, 68% 0%, 72% 2%, 76% 0%, 80% 2%, 84% 0%, 88% 2%, 92% 0%, 96% 2%, 100% 0%, 98% 4%, 100% 8%, 98% 12%, 100% 16%, 98% 20%, 100% 24%, 98% 28%, 100% 32%, 98% 36%, 100% 40%, 98% 44%, 100% 48%, 98% 52%, 100% 56%, 98% 60%, 100% 64%, 98% 68%, 100% 72%, 98% 76%, 100% 80%, 98% 84%, 100% 88%, 98% 92%, 100% 96%, 100% 100%, 96% 98%, 92% 100%, 88% 98%, 84% 100%, 80% 98%, 76% 100%, 72% 98%, 68% 100%, 64% 98%, 60% 100%, 56% 98%, 52% 100%, 48% 98%, 44% 100%, 40% 98%, 36% 100%, 32% 98%, 28% 100%, 24% 98%, 20% 100%, 16% 98%, 12% 100%, 8% 98%, 4% 100%, 0% 98%, 2% 96%, 0% 92%, 2% 88%, 0% 84%, 2% 80%, 0% 76%, 2% 72%, 0% 68%, 2% 64%, 0% 60%, 2% 56%, 0% 52%, 2% 48%, 0% 44%, 2% 40%, 0% 36%, 2% 32%, 0% 28%, 2% 24%, 0% 20%, 2% 16%, 0% 12%, 2% 8%, 0% 4%, 0% 2%);
+  border: none;
+  /* The drop-shadow filter handles the shadow even on the clipped edges! */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.3s ease, z-index 0.3s;
+  z-index: 1;
 }
 
+.feat-card:nth-child(1) { transform: rotate(-1.5deg); }
+.feat-card:nth-child(2) { transform: rotate(2deg); }
+.feat-card:nth-child(3) { transform: rotate(1.2deg); }
+.feat-card:nth-child(4) { transform: rotate(-2deg); }
+
 .feat-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--blue-primary);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px) scale(1.02) rotate(0deg);
+  filter: drop-shadow(4px 10px 14px rgba(0, 0, 0, 0.12));
+  z-index: 10;
 }
 
 .feat-card::after {
   content: '';
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 8px;
-  height: 8px;
+  top: 10px;
+  left: 50%;
+  margin-left: -6px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--feat-color, var(--blue-primary));
-  opacity: 0.55;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.7) 0%, var(--feat-color, var(--blue-primary)) 50%);
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), inset -1px -1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .feat-card__icon-wrap {
   width: 50px;
   height: 50px;
   border-radius: var(--radius-sm);
-  background: var(--feat-bg, var(--bg-lavender));
+  background: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .feat-card__title {
-  font-family: var(--font-display);
-  font-weight: 620;
-  font-size: clamp(1.22rem, 2vw, 1.48rem);
+  font-family: 'Kalam', cursive;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   color: var(--navy);
   margin-bottom: 10px;
-  line-height: 1.3;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
 }
 
 .feat-card__desc {
-  font-size: 0.94rem;
+  font-family: 'Kalam', cursive;
+  font-size: 1.1rem;
   color: var(--slate);
-  line-height: 1.72;
+  line-height: 1.5;
   margin-bottom: 18px;
 }
 
@@ -86,17 +103,17 @@
 .feat-badge {
   padding: 4px 11px;
   border-radius: var(--radius-pill);
-  font-size: 0.71rem;
-  font-weight: 560;
-  font-family: var(--font-body);
-  border: 1px solid var(--btn-secondary-border);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Kalam', cursive;
+  border: 1px dashed var(--btn-secondary-border);
 }
 
-.feat-badge--green  { background: var(--feature-security-bg); color: var(--feature-security-color); }
-.feat-badge--blue   { background: var(--feature-phone-bg); color: var(--feature-phone-color); }
-.feat-badge--wa     { background: var(--bg-lavender); color: var(--whatsapp-green); }
-.feat-badge--tg     { background: var(--feature-bot-bg); color: var(--telegram-blue); }
-.feat-badge--slate  { background: var(--bg-lavender); color: var(--slate); }
+.feat-badge--green  { background: rgba(255, 255, 255, 0.6); color: var(--feature-security-color); }
+.feat-badge--blue   { background: rgba(255, 255, 255, 0.6); color: var(--feature-phone-color); }
+.feat-badge--wa     { background: rgba(255, 255, 255, 0.6); color: var(--whatsapp-green); }
+.feat-badge--tg     { background: rgba(255, 255, 255, 0.6); color: var(--telegram-blue); }
+.feat-badge--slate  { background: rgba(255, 255, 255, 0.6); color: var(--slate); }
 
 /* Kiosk pins */
 .feat-kiosk-pins {
@@ -106,13 +123,14 @@
 }
 
 .feat-pin {
-  font-size: 0.7rem;
-  font-weight: 560;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Kalam', cursive;
   color: var(--slate);
-  background: var(--bg-lavender);
+  background: rgba(255, 255, 255, 0.6);
   padding: 4px 10px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--btn-secondary-border);
+  border: 1px dashed var(--btn-secondary-border);
 }
 
 /* ---- RESPONSIVE ---- */

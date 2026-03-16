@@ -36,11 +36,10 @@ function FAQItem({ faq, isOpen, onToggle }) {
         <span className="faq-item__question">{faq.q}</span>
         <ChevronDown size={20} className="faq-item__chevron" />
       </button>
-      <div
-        className="faq-item__body"
-        style={{ maxHeight: isOpen ? '320px' : '0' }}
-      >
-        <p className="faq-item__answer">{faq.a}</p>
+      <div className="faq-item__body">
+        <div className="faq-item__body-inner">
+          <p className="faq-item__answer">{faq.a}</p>
+        </div>
       </div>
     </div>
   );
